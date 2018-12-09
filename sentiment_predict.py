@@ -59,6 +59,10 @@ def predict ():
     data["prediction"] = str(res)
     return jsonify(data)
 
+@app.route('/stat')
+def stat():
+    return jsonify({"average": 0.11, "count": 128})
+
 if __name__ == "__main__":
     print("* Starting web service...")
     app.run(
